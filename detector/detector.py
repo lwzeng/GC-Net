@@ -14,7 +14,7 @@ from module import *
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-Save_path = "/NAS_REMOTE/weizeng/model/weakdetection/"
+Save_path = "/path/to/model/"
 parser = argparse.ArgumentParser(description='classifier for loss')
 parser.add_argument('--dataset', default="ImageNet", help='CUB, ImageNet')
 parser.add_argument('--loss', default="ObjBack", help='Obj, areaObj, ObjBack, areaObjBack')
@@ -36,13 +36,11 @@ parser.add_argument('--nz', default=1, type=int, help='Number of channels in the
 parser.add_argument('--ngf', default=32, type=int, help='Size of feature maps in generator.')
 parser.add_argument('--generator', default=Save_path+"/coord2mask/"+parser.parse_args().mask_shape+"/45degree/coord2map_119999.pth", help='backbone type')
 if parser.parse_args().dataset == "CUB":
-    parser.add_argument('--data_root', default='/data/weizeng/code/DANet/data/CUB_200_2011/', help='path of data root')
+    parser.add_argument('--data_root', default='/path/to/CUB_200_2011/', help='path of data root')
     parser.add_argument('--test_list', default='list/test.txt', help='path of test set list file')
     parser.add_argument('--train_list', default='list/train.txt', help='path of train set list file')
-    parser.add_argument('--family_list', default='list/family_label.txt', help='path of train set list file')
-    parser.add_argument('--root_list', default='list/order_label.txt', help='path of train set list file')
 elif parser.parse_args().dataset == "ImageNet":
-    parser.add_argument('--data_root', default='/home/weizeng/ILSVRC2012/', help='path of data root')
+    parser.add_argument('--data_root', default='/path/to/ILSVRC2012/', help='path of data root')
     parser.add_argument('--test_list', default='/val.txt', help='path of test set list file')
     parser.add_argument('--train_list', default='/train.txt', help='path of train set list file')
 parser.add_argument('--start_epoch', default=0, type=int, help='Resume training at this iter')

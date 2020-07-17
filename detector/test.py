@@ -17,7 +17,7 @@ np.set_printoptions(precision=3, suppress=True)
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 
-Save_path = "/NAS_REMOTE/weizeng/model/weakdetection/"
+Save_path = "/path/to/model/"
 
 parser = argparse.ArgumentParser(description='classifier for loss')
 parser.add_argument('--workers', default=1, type=int, help='worker number')
@@ -42,7 +42,7 @@ if parser.parse_args().mask_shape == "rectangle":
     parser.add_argument('--generator', default=Save_path+"/coord2mask/"+parser.parse_args().mask_shape+"/coord2map_110000.pth", help='backbone type')
 else:
     parser.add_argument('--generator', default=Save_path+"/coord2mask/"+parser.parse_args().mask_shape+"/45degree/coord2map_119999.pth", help='backbone type')
-parser.add_argument('--data_root', default='/data/weizeng/code/DANet/data/CUB_200_2011/', help='path of data root')
+parser.add_argument('--data_root', default='/path/to/CUB_200_2011/', help='path of data root')
 parser.add_argument('--test_list', default='list/test.txt', help='path of test set list file')
 parser.add_argument('--train_list', default='list/train.txt', help='path of train set list file')
 args = parser.parse_args()

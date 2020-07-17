@@ -10,19 +10,23 @@ We propose a geometry constrained network, termed GC-Net, for weakly supervised 
     ~~~
     git clone git@github.com:lwzeng/Geometry-Constrained-Weakly-Supervised-Object-Localization.git
     ~~~
-2. Create an Anaconda environment with python3.6 and PyTorch==1.1.0
-3. Download the images of CUB-200-2011 dataset and place the data at $DANet_ROOT/data/CUB-200-2011
+2. Create an Anaconda environment:
+~~~
+python==3.6
+PyTorch==1.1.0
+~~~
+3. Download the images of CUB-200-2011 dataset and modify the data path in the 
 ## Training
 python detector.py
 ## Evaluation
 cub200:
-    ~~~
-    python test.py
-    ~~~
+~~~
+python detector.py 
+~~~
 imagenet:
-    ~~~
-    python test_imagenet.py
-    ~~~
+~~~
+python test_imagenet.py
+~~~
 ## Visualization
 Localization results on some images from the ILSRC2012 dataset using GC-Net
 ![](readme/imagenet.png)

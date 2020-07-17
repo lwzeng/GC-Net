@@ -23,7 +23,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 # 'Obj, areaObj, ObjBack, areaObjBack'
 loss_type = "areaObjBack"
-Save_path = "/NAS_REMOTE/weizeng/model/weakdetection/"
+Save_path = "/path/to/model/"
 
 parser = argparse.ArgumentParser(description='classifier for loss')
 parser.add_argument('--workers', default=1, type=int, help='worker number')
