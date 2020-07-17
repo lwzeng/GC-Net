@@ -7,9 +7,9 @@ We propose a geometry constrained network, termed GC-Net, for weakly supervised 
 
 ## Setup
 1. Clone this repo:
-    ~~~
-    git clone git@github.com:lwzeng/Geometry-Constrained-Weakly-Supervised-Object-Localization.git
-    ~~~
+~~~
+git clone git@github.com:lwzeng/Geometry-Constrained-Weakly-Supervised-Object-Localization.git
+~~~
 2. Create an Anaconda environment:
 ~~~
 python==3.6
@@ -17,14 +17,19 @@ PyTorch==1.1.0
 ~~~
 3. Download the images of CUB-200-2011 dataset and modify the data path in the 
 ## Training
+~~~
+cd detector
 python detector.py
+~~~
 ## Evaluation
 cub200:
 ~~~
+cd detector
 python detector.py 
 ~~~
 imagenet:
 ~~~
+cd detector
 python test_imagenet.py
 ~~~
 ## Visualization
