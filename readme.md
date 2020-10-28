@@ -24,7 +24,7 @@ python detector.py
 cub200:
 ~~~
 cd detector
-python detector.py 
+python test.py 
 ~~~
 imagenet:
 ~~~
