@@ -285,8 +285,8 @@ class evaluate_tool():
             for bbox_j in range(imgBoxes_b.shape[0]):
                 box_b = imgBoxes_b[bbox_j]
                 area_b = (box_b[2] - box_b[0])*(box_b[3] - box_b[1])
-                intersect = (min(box_a[2], box_b[2]) - max(box_a[0], box_b[0]))*(min(box_a[3], box_b[3]) - max(box_a[1], box_b[1]))
-                abIOU = intersect/(area_a+area_b-intersect)
+                intersec = (min(box_a[2], box_b[2]) - max(box_a[0], box_b[0]))*(min(box_a[3], box_b[3]) - max(box_a[1], box_b[1]))
+                abIOU = intersec/(area_a+area_b-intersec)
                 if abIOU > tempIOU:
                     tempIOU = abIOU
             IOUList[bbox_i] = tempIOU
