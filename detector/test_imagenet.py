@@ -52,8 +52,8 @@ parser.add_argument('--train_list', default='/train.txt', help='path of train se
 args = parser.parse_args()
 
 print(args.detector)
-mean_vals = [0.485, 0.456, 0.406]
-std_vals = [0.229, 0.224, 0.225]
+# mean_vals = [0.485, 0.456, 0.406]
+# std_vals = [0.229, 0.224, 0.225]
 
 if args.back_bone == "inceptionV3":
     input_size = 299
