@@ -48,9 +48,8 @@ parser.add_argument('--train_list', default='list/train.txt', help='path of trai
 args = parser.parse_args()
 print(args.detector)
 
-mean_vals = [0.485, 0.456, 0.406]
-std_vals = [0.229, 0.224, 0.225]
-
+#mean_vals = [0.485, 0.456, 0.406]
+#std_vals = [0.229, 0.224, 0.225]
 
 transform = transforms.Compose([
     transforms.Resize((256, 256)),
