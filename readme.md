@@ -14,7 +14,7 @@ git clone git@github.com:lwzeng/Geometry-Constrained-Weakly-Supervised-Object-Lo
 python==3.6
 PyTorch==1.1.0
 ~~~
-3. Download the dataset and modify the data path in the code。
+3. Download the dataset and modify the data path in the code.
 ## Training
 ~~~
 cd detector
