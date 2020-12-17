@@ -17,6 +17,13 @@ PyTorch==1.1.0
 3. Download the dataset and modify the data path in the code.
 ## Training
 ~~~
+1. Training the classifier
+cd classifier
+python classifier_vgg.py or python classifier_google.py
+2. Training the generator
+cd generator
+python train_generator.py
+3. Training the detector
 cd detector
 python detector.py
 ~~~
