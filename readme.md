@@ -7,7 +7,7 @@ We propose a geometry constrained network, termed GC-Net, for weakly supervised 
 ## Setup
 1. Clone this repo:
 ~~~
-git clone git@github.com:lwzeng/Geometry-Constrained-Weakly-Supervised-Object-Localization.git
+git clone git@github.com:lwzeng/GC-Net.git
 ~~~
 2. Create an Anaconda environment:
 ~~~
